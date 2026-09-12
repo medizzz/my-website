@@ -1,0 +1,245 @@
+:root {
+    --bg: #f7f5f0;
+    --bg-card: #fffdf9;
+    --text: #211f1c;
+    --text-muted: #6f6a62;
+    --accent: #a4462f;
+    --accent-dark: #7a3b30;
+    --border: #e3ddd0;    --font-display: "Fraunces", Georgia, serif;
+}
+
+/* ===== GENERAL ===== */
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+
+/* ===== NAVIGATION ===== */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+    padding: 22px 8%;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--bg);
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+}
+
+nav a:hover {
+    color: var(--text);
+}
+
+nav a.active {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+}
+
+
+/* ===== MAIN CONTENT ===== */
+
+main {
+    max-width: 850px;
+    margin: 70px auto;
+    padding: 0 30px;
+}
+
+
+/* ===== HEADINGS ===== */
+
+/* ===== HEADINGS ===== */
+
+h1 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 44px);
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+h2 {
+    font-family: var(--font-display);
+    font-size: 25px;
+    margin-top: 45px;
+}
+
+
+/* ===== PARAGRAPHS ===== */
+
+p {
+    font-size: 18px;
+    max-width: 68ch;
+    margin-bottom: 25px;
+}
+
+
+/* ===== DIVIDER ===== */
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 40px 0;
+}
+
+
+/* ===== ESSAY CARDS ===== */
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 30px 32px;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+    transform: translateY(-2px);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card h2 a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.card h2 a:hover {
+    color: var(--accent);
+}
+
+.card-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.tag {
+    background-color: #f1e4dd;
+    color: var(--accent);
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.read-more {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+
+/* ===== EMPTY STATE (Research placeholder) ===== */
+
+.empty-state {
+    border: 1px dashed #ccc;
+    border-radius: 6px;
+    padding: 44px 32px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.empty-state p {
+    color: var(--text-muted);
+    margin: 0 auto;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    border-top: 1px solid var(--border);
+    margin-top: 90px;
+    padding: 30px 8% 40px;
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ===== RESPONSIVE / MOBILE ===== */
+
+@media (max-width: 700px) {
+    body {
+        font-size: 16px;
+    }
+
+    nav {
+        padding: 18px 6%;
+        gap: 8px 18px;
+    }
+
+    main {
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .card {
+        padding: 22px 20px;
+    }
+
+    footer {
+        padding: 26px 6% 34px;
+    }
+}
+/* ===== HERO IMAGE ===== */
+
+.hero-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0 30px;
+    display: block;
+}
+.card-image {
+    width: calc(100% + 64px);
+    margin: -30px -32px 20px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    display: block;
+}
